@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <body>
+        <block name="require.js" class="Magento\Framework\View\Element\Template" template="Magento_Theme::page/js/require_js.phtml" />
+        <referenceBlock name="header.links">
+
+            <block class="Magento\Framework\View\Element\Html\Link" name="wishlist-link" before="-" ifconfig="guestwishlist/general/addlink">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Wishlist</argument>
+                    <argument name="path" xsi:type="string" translate="false">wishlist</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="site-map">
+                <arguments>
+                    <argument name="label" xsi:type="string">Site Map</argument>
+                    <argument name="path" xsi:type="string">site-map</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customercare">
+                <arguments>
+                    <argument name="label" xsi:type="string">Customer Care</argument>
+                    <argument name="path" xsi:type="string">customercare</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <move element="header" destination="header-wrapper"/>
+        <move element="minicart" destination="navigation.sections" />
+        <move element="footer_links" destination="before.body.end" />
+        <referenceBlock name="header.links">
+            <!-- Contact us Link -->
+            <block class="Magento\Framework\View\Element\Html\Link" name="home.link" before="contactus.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">HOME</argument>
+                    <argument name="path" xsi:type="string" translate="false">home</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="contactus.link" after="register-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">CONTACT US</argument>
+                    <argument name="path" xsi:type="string" translate="false">contact-us</argument>
+                </arguments>
+            </block>
+            <!-- CMS Page Link Link -->
+            <block class="Magento\Framework\View\Element\Html\Link" name="aboutus.link" before="contactus.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">ABOUT US</argument>
+                    <argument name="path" xsi:type="string" translate="false">about-us</argument>
+                </arguments>
+            </block>
+            <referenceBlock name="register-link" remove="true" />
+            <referenceBlock name="authorization-link" remove="true" />
+            <referenceBlock name="wish-list-link" remove="true" />
+            <referenceBlock name="my-account-link" remove="true" />
+            <referenceBlock name="authorization-link-login" remove="true" />
+        </referenceBlock>
+        <referenceBlock name="header-wrapper">
+            <block name="require" class="Magento\Framework\View\Element\Template" template="Magento_Theme::form.phtml" />
+        </referenceBlock>
+    </body>
+</page>

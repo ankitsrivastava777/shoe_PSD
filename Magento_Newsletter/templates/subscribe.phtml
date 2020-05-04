@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+?>
+<div class="block newsletter">
+    <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+    <div class="content">
+        <form class="form subscribe" novalidate action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' id="newsletter-validate-detail">
+            <div class="field newsletter">
+                <div class="control">
+                    <label for="newsletter">
+                        <span class="label">
+                            <?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?>
+                        </span>
+                        <input name="email" type="email" id="newsletter" placeholder="<?= $block->escapeHtmlAttr(__('')) ?>" data-mage-init='{"mage/trim-input":{}}' data-validate="{required:true, 'validate-email':true}" />
+                    </label>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit" aria-label="Subscribe">
+                    <span><?= $block->escapeHtml(__('GO')) ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="img1">
+    <img src="<?php echo $this->getViewFileUrl('images/divider.png'); ?>" id="divider">
+    <img src="<?php echo $this->getViewFileUrl('images/newww.jpg'); ?>" id="shop">
+
+    <img src="<?php echo $this->getViewFileUrl('images/divider.png'); ?>" id="divider">
+
+</div>
+<div id="social">
+    <div class="follow">
+        <?= $block->escapeHtml(__('Follow us')) ?>
+    </div>
+    <div class="icn">
+        <img src="<?php echo $this->getViewFileUrl('images/fac.png'); ?>" id="fac">
+        <img src="<?php echo $this->getViewFileUrl('images/twt.png'); ?>" id="twt">
+        <img src="<?php echo $this->getViewFileUrl('images/lin.png'); ?>" id="lin">
+        <img src="<?php echo $this->getViewFileUrl('images/soc.png'); ?>" id="soc">
+
+    </div>
+
+</div>
+</div>
