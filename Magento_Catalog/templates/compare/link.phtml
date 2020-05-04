@@ -1,0 +1,20 @@
+<?php $compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare');
+if ($compareHelper->hasItems()) { ?>
+<p>fvrfegf</p>
+<?php
+} else {
+?>
+    <script>
+        require
+            (
+                ['jquery', 'mage/translate'],
+                function($) {
+                    $(document).ready(function() {
+                        $(".compare_count").html("<p>You have no items to  compare</p>");
+                    })
+                }
+            );
+    </script>
+<?php
+}
+?>
