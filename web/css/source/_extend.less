@@ -15,11 +15,12 @@
 	margin: 0;
 	padding: 0;
 }
+// Color variables (appears count calculates by raw css)
+@color0: #2e2e2e; // Appears 2 times
+
 // Width variables (appears count calculates by raw css)
 @width5: 70%; // Appears 2 times
 
-// Height variables (appears count calculates by raw css)
-@height2: 20px; // Appears 2 times
 
 .nav-sections {
 	background: #f0f0f000;
@@ -105,7 +106,7 @@
 	margin-top: 10px;
 }
 #lock {
-	height: @height2;
+	height: 20px;
 	margin-right: 159px;
 	position: absolute;
 	right: 0px;
@@ -293,9 +294,10 @@ div.mage-error[generated] {
 }
 .cart_counter {
 	background: blue;
-	float: left;
-	height: @height2;
-	width: 30%;
+	float: right;
+	height: auto;
+	margin-left: 2%;
+	width: 28%;
 }
 .new_pro {
 	border: 1px solid black;
@@ -323,6 +325,9 @@ div#kids {
 .widget2 {
 	margin-left: 3%;
 	width: 95%;
+	.block-content {
+		margin-top: -15%;
+	}
 }
 .mp-ps-info {
 	color: black;
@@ -351,4 +356,37 @@ p.ban2 {
 		display: inline-block;
 		margin-right: 5%;
 	}
+}
+.heading {
+	background: red;
+	color: white;
+	font-size: 1.4em;
+	font-weight: 600;
+	padding-left: 5%;
+	padding-top: 1%;
+}
+.counter {
+	background: red;
+	color: white;
+	font-size: 1.2em;
+	padding-bottom: 1%;
+	padding-left: 5%;
+	padding-top: 2%;
+}
+.compare {
+	background: @color0;
+	color: white;
+	font-size: 1.4em;
+	font-weight: 600;
+	margin-top: 5%;
+	padding-left: 5%;
+	padding-top: 2%;
+}
+.compare_count {
+	background: @color0;
+	color: white;
+	font-size: 1.2em;
+	padding-bottom: 2%;
+	padding-left: 5%;
+	padding-top: 2%;
 }
