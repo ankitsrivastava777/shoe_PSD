@@ -36,7 +36,7 @@
             </block>
         </referenceBlock>
         <move element="header" destination="header-wrapper"/>
-        <move element="minicart" destination="navigation.sections" />
+        <move element="minicart" destination="catalog.topnav" />
         <move element="footer_links" destination="before.body.end" />
         <referenceBlock name="header.links">
             <!-- Contact us Link -->
