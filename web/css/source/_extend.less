@@ -514,3 +514,91 @@ img#vr3 {
   top: 0;
   width: 11em !important;
 }
+// Color variables (appears count calculates by raw css)
+@color0: #e0dfdb; // Appears 2 times
+
+// Width variables (appears count calculates by raw css)
+@width0: 100%; // Appears 2 times
+@width1: 10em; // Appears 2 times
+
+.widget3 {
+  border: 1px solid @color0;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  .product-item-details {
+    display: inline-block;
+    float: right;
+    margin-right: 1em;
+  }
+  .product-item {
+    .tocart {
+      border-radius: 0;
+      display: none;
+      font-size: 1.3rem;
+      line-height: 1;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      white-space: nowrap;
+    }
+  }
+  .product-image-container {
+    display: inline-block;
+    max-width: @width0;
+    width: @width1!important;
+  }
+  img.product-image-photo {
+    max-width: 12em !important;
+    width: @width1!important;
+  }
+}
+.widget1 {
+  .product.details.slider-product-item-details {
+    border-top: dotted 2px pink;
+    text-align: center;
+  }
+  li.product-item.product-slider {
+    border: 1px solid @color0;
+  }
+}
+.banr {
+  margin-left: 7em;
+}
+h1.sale {
+  margin-left: 18px;
+  margin-top: -26px;
+}
+h2.collection {
+  background: black;
+  color: wheat;
+  font-weight: 400;
+  left: 185px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 2px;
+  position: absolute;
+  top: 6em;
+}
+h2.year {
+  color: black;
+  font-size: 5em;
+  font-weight: 400;
+  letter-spacing: -2px;
+  margin-left: 137px;
+  margin-top: -28px;
+}
+h4.view {
+  font-size: 0.9em;
+  font-weight: 400;
+  margin-left: 153px;
+  margin-top: -16px;
+  padding-bottom: 20px;
+}
+.item {
+  padding-top: 1px;
+}
+.ar {
+  height: 9px;
+  margin-left: 120px;
+  margin-top: -11px;
+  width: 10px;
+}
