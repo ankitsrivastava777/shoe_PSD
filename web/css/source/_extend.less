@@ -1,10 +1,13 @@
 // Color variables (appears count calculates by raw css)
 @color0: #e0dfdb; // Appears 3 times
-@color1: #2e2e2e; // Appears 2 times
+@color1: #444341; // Appears 2 times
+@color2: #c2c2c0; // Appears 2 times
+@color3: #2e2e2e; // Appears 2 times
+@color4: #fbfaf6; // Appears 2 times
 
 // Width variables (appears count calculates by raw css)
-@width1: 100%; // Appears 4 times
-@width3: 70%; // Appears 2 times
+@width2: 100%; // Appears 4 times
+@width4: 70%; // Appears 2 times
 
 .nav-sections {
   background: #f0f0f000;
@@ -20,13 +23,13 @@
 }
 .page-header {
   .panel.wrapper {
-    background-color: #fbfaf6;
+    background-color: @color4;
     border-bottom: 1px solid #e8e8e8;
   }
   .switcher {
     .options {
       display: inline-block;
-      margin-right: 19rem;
+      margin-right: 23rem;
       position: relative;
     }
   }
@@ -34,10 +37,23 @@
 .header.panel > .header.links > li {
   margin: 0 0 0 18px;
   &:after {
-    border-right: 1px solid #c2c2c0;
+    border-right: 1px solid @color2;
     content: "|";
     font-size: 10px;
     padding: 0 1rem;
+  }
+}
+ul.header.links {
+  li {
+    &:first-child {
+      before {
+        border-right: 1px solid @color2;
+        content: "";
+        font-size: 10px;
+        margin-left: -35px;
+        margin-right: 17px;
+      }
+    }
   }
 }
 .navigation {
@@ -51,7 +67,7 @@
   padding: 0;
   position: relative;
   top: 0;
-  width: @width1;
+  width: @width2;
   z-index: 3;
   .level0 > .level-top {
     color: white;
@@ -93,15 +109,23 @@
 }
 #h_link {
   display: inline-flex;
-  margin-right: 24px;
+  margin-left: 125px;
+  margin-right: 18px;
   margin-top: 10px;
 }
 #lock {
   height: 20px;
-  margin-right: 159px;
-  position: absolute;
+  margin-bottom: -6px;
+  margin-right: -3px;
   right: 0px;
   top: 47px;
+}
+.wel {
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 900;
+  margin-left: 12px;
+  margin-right: 13px;
 }
 .menu {
   float: right;
@@ -180,7 +204,7 @@
   .switcher {
     .options {
       display: inline-block;
-      margin-right: 19rem;
+      margin-right: 23rem;
       position: relative;
     }
   }
@@ -214,7 +238,7 @@
     margin-right: 8px;
     margin-top: 10px;
     padding: 24px 0 20px 0px;
-    width: @width1;
+    width: @width2;
   }
   .action.subscribe {
     background: #ff1929;
@@ -282,11 +306,11 @@ img#divider1 {
   margin-right: 150px;
 }
 .product {
-  width: @width1;
+  width: @width2;
 }
 .widget1 {
   float: left;
-  width: @width3;
+  width: @width4;
   .slider-product-item-info {
     width: 93%;
   }
@@ -319,7 +343,7 @@ img#divider1 {
     text-align: center;
   }
   li.product-item.product-slider {
-    border: 1px solid @color0;
+    border: 2px solid @color0;
   }
 }
 .cart_counter {
@@ -330,7 +354,7 @@ img#divider1 {
 }
 .new_pro {
   border: 1px solid @color0;
-  width: @width3;
+  width: @width4;
 }
 .kids {
   display: inline;
@@ -395,7 +419,7 @@ p.ban2 {
   padding-left: 5%;
   padding-top: 1%;
 }
-.counter {
+.counter1 {
   background: red;
   color: white;
   font-size: 1.2em;
@@ -404,7 +428,7 @@ p.ban2 {
   padding-top: 2%;
 }
 .compare {
-  background: @color1;
+  background: @color3;
   color: white;
   font-size: 1.4em;
   font-weight: 600;
@@ -418,14 +442,19 @@ p.ban2 {
         font-weight: unset;
       }
     }
+    .actions-toolbar {
+      margin: 10px 0 0px;
+      padding-bottom: 12px;
+    }
   }
   .empty {
-    font-size: 0.9em;
-    font-weight: 400;
+    font-size: 0.85em;
+    font-weight: 200;
+    padding-bottom: 1em;
   }
 }
 .compare_count {
-  background: @color1;
+  background: @color3;
   color: white;
   font-size: 1.2em;
   padding-bottom: 2%;
@@ -474,7 +503,7 @@ img#detail {
   width: 38%;
 }
 .widget3 {
-  border: 1px solid @color0;
+  border: 2px solid @color0;
   margin-bottom: 2em;
   margin-top: 2em;
   a#details {
@@ -498,7 +527,7 @@ img#detail {
     display: inline-block;
     margin-left: 7px;
     margin-right: 12px;
-    max-width: @width1;
+    max-width: @width2;
   }
   img.product-image-photo {
   }
@@ -506,7 +535,7 @@ img#detail {
     margin-left: 5px;
   }
   .product-image-wrapper {
-    border: 1px solid black;
+    border: 1px solid #edede9;
     display: block;
     height: 0;
     overflow: hidden;
@@ -514,7 +543,11 @@ img#detail {
     z-index: 1;
   }
   .block-title {
-    margin: 0 11px 20px;
+    color: @color1;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 0 11px 10px;
+    position: relative;
   }
 }
 .dash {
@@ -572,7 +605,7 @@ h4.view {
   font-weight: 400;
   margin-left: 245px;
   margin-top: -16px;
-  padding-bottom: 20px;
+  padding-bottom: 45px;
 }
 .item {
   padding-top: 1px;
@@ -585,7 +618,11 @@ h4.view {
 }
 .block-wishlist {
   .block-title {
-    margin: 0 11px 20px;
+    color: @color1;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 0 11px 10px;
+    position: relative;
     strong {
       font-size: unset;
       font-weight: unset;
@@ -607,4 +644,32 @@ h4.view {
       font-weight: unset;
     }
   }
+}
+.compare.wrapper {
+  display: none;
+}
+.block-search {
+  input {
+    background: @color4;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.2);
+    margin-left: -45px;
+    margin: 0;
+    padding-left: 13px;
+    padding-right: 26px;
+    position: static;
+    width: 300px;
+  }
+}
+.block-compare {
+  .action.delete {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+#banner-slider-carousel {
+  margin-bottom: 5px;
+  margin-top: 0px;
 }
