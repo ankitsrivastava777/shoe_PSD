@@ -35,7 +35,7 @@
                 </arguments>
             </block>
         </referenceBlock>
-        <move element="header" destination="header-wrapper"/>
+        <move element="top.search" destination="header-wrapper"/>
         <move element="minicart" destination="catalog.topnav" />
         <move element="footer_links" destination="before.body.end" />
         <referenceBlock name="header.links">

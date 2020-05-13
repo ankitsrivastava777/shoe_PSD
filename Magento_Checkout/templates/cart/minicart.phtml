@@ -70,23 +70,4 @@
         }
     }
     </script>
-    <?php
-
-    $counter = $this->helper('\Magento\Checkout\Helper\Cart');
-    if ($counter->getItemsCount() == 0) {
-    ?>
-        <script>
-            require
-                (
-                    ['jquery', 'mage/translate'],
-                    function($) {
-                        $(document).ready(function() {
-                            $(".counter").html("<p>You have no item in cart </p>");
-                        })
-                    }
-                );
-        </script>
-    <?php
-    }
-    ?>
 </div>

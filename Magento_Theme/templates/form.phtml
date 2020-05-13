@@ -1,10 +1,14 @@
 <div class="menu">
     <div id="login_link">
         <img src="<?php echo $this->getViewFileUrl('images/lock.jpg'); ?>" id="lock">
+
         <a id="login" href="<?php echo $this->getUrl("customer/account/login"); ?>">Login</a>
     </div>
+    <?php
+    echo $this->helper('Excellence\Checkout\Helper\Data')->getConfig('design/header/welcome');
+    ?>
     <div id="h_link">
-        <li> <a id="link1" href="#">My Account</a></li>
-        <li><a id="link2" href="#">My Wishlist</a></li>
+        <li> <a id="link1" href="#"><?= $block->escapeHtmlAttr(__('My Account')) ?></a></li>
+        <li><a id="link2" href="#"><?= $block->escapeHtmlAttr(__('My Wishlist')) ?></a></li>
     </div>
 </div>
